@@ -7,15 +7,15 @@ set(CMAKE_BUILD_TYPE Debug)
 
 # Add the source files
 set(SOURCES
-GDelFlipping/src/DelaunayChecker.cpp
-GDelFlipping/src/Demo.cpp
-GDelFlipping/src/InputCreator.cpp
+GDelFlipping/src/DelaunayChecker.cu
+GDelFlipping/src/Demo.cu
+GDelFlipping/src/InputCreator.cu
 GDelFlipping/src/RandGen.cpp
 GDelFlipping/src/gDel3D/GpuDelaunay.cu
 GDelFlipping/src/gDel3D/CPU/predicates.cpp
-GDelFlipping/src/gDel3D/CPU/PredWrapper.cpp
-GDelFlipping/src/gDel3D/CPU/Splaying.cpp
-GDelFlipping/src/gDel3D/CPU/Star.cpp
+GDelFlipping/src/gDel3D/CPU/PredWrapper.cu
+GDelFlipping/src/gDel3D/CPU/Splaying.cu
+GDelFlipping/src/gDel3D/CPU/Star.cu
 GDelFlipping/src/gDel3D/GPU/KerDivision.cu
 GDelFlipping/src/gDel3D/GPU/KerPredicates.cu
 GDelFlipping/src/gDel3D/GPU/ThrustWrapper.cu

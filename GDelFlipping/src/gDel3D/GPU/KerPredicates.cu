@@ -43,6 +43,7 @@ DAMAGE.
 #include "KerCommon.h"
 #include "KerPredicates.h"
 #include "DPredWrapper.h"
+#include <device_functions.h>
 
 #ifndef __CUDACC__
 #define __launch_bounds__( x )
@@ -144,7 +145,7 @@ __forceinline__ __device__ float hash( int k )
     k ^= k >> 31;
     k ^= k << 31;
 
-    return int_as_float( k ); 
+    return __int_as_float( k ); 
 }
 
 __global__ void
