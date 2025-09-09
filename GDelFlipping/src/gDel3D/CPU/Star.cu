@@ -516,7 +516,7 @@ int& firstHoleTriIdx
 
 int Star::getFreeTri( int& freeTriIdx )
 {
-    int begTriIdx = freeTriIdx;
+    //int begTriIdx = freeTriIdx;
 
     while ( freeTriIdx < _triVec.size() ) 
     {

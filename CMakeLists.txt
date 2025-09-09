@@ -36,7 +36,7 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 # Set target properties using modern CMake approach
 set_target_properties(${PROJECT_NAME} PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
-    CUDA_ARCHITECTURES "60;70;80;86;89"
+    CUDA_ARCHITECTURES "75;80;86;89"
     CXX_STANDARD 20
     CXX_STANDARD_REQUIRED ON
     CUDA_STANDARD 20
@@ -53,6 +53,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 target_compile_options(${PROJECT_NAME} PRIVATE
     $<$<COMPILE_LANGUAGE:CUDA>:--extended-lambda>
     $<$<COMPILE_LANGUAGE:CUDA>:--expt-relaxed-constexpr>
+    $<$<COMPILE_LANGUAGE:CUDA>:-Wno-deprecated-gpu-targets>
 )
 
 # Set optimization flags for Release build
@@ -60,3 +61,10 @@ target_compile_options(${PROJECT_NAME} PRIVATE
     $<$<CONFIG:Release>:-O3>
     $<$<CONFIG:Release>:$<$<COMPILE_LANGUAGE:CUDA>:-O3>>
 )
+
+# Fix library conflicts
+if(WIN32)
+    set_target_properties(${PROJECT_NAME} PROPERTIES
+        LINK_FLAGS "/NODEFAULTLIB:LIBCMT"
+    )
+endif()

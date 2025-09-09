@@ -221,10 +221,10 @@ void Splaying::makeFailedStarsAndQueue(
     PerfTimer timer; 
 
     double totalTime     = 0.0; 
-    double timeFlip      = 0.0; 
-    double timeCreate    = 0.0; 
-    double timeConstruct = 0.0; 
-    double timeInit      = 0.0; 
+    //double timeFlip      = 0.0; 
+    //double timeCreate    = 0.0; 
+    //double timeConstruct = 0.0; 
+    //double timeInit      = 0.0; 
 
     // Init vectors
     _starVec.assign( _predWrapper.pointNum(), ( Star* ) NULL );
@@ -296,9 +296,9 @@ void Splaying::processQue()
     PerfTimer timer;  
 
     double timeTotal  = 0.0; 
-    double timeInsert = 0.0; 
-    double timeCheck  = 0.0; 
-    double timeProof  = 0.0; 
+    //double timeInsert = 0.0; 
+    //double timeCheck  = 0.0; 
+    //double timeProof  = 0.0; 
     double timeCreate = 0.0; 
 
     int proofArr[4];
@@ -488,7 +488,7 @@ void Splaying::starsToTetra()
         std::cout << "  Final stars:                    " << _actStarVec.size() << "\n\n";
 
     int newTet = 0; 
-    int delTet = 0; 
+    //int delTet = 0; 
 
     PerfTimer timer; 
 

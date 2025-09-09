@@ -80,7 +80,7 @@ Point3HVec&     pointVec,
 int             seed
 )
 {
-    const RealType PI = 3.141592654; 
+    //const RealType PI = 3.141592654; 
 
     assert( pointVec.empty() );
 

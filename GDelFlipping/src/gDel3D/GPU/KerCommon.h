@@ -44,7 +44,7 @@ DAMAGE.
 #ifndef __CUDACC__
 #define __CUDACC__
 #include <device_launch_parameters.h>
-#include <device_functions.h>
+#include <cuda_runtime.h>
 #undef __CUDACC__
 #endif
 

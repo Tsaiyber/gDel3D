@@ -49,7 +49,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 const int deviceIdx = 0;
 const int seed = 123456789;
-const int pointNum = 10000000;
+const int pointNum = 5000000;
 const Distribution dist = UniformDistribution;
 
 Point3HVec pointVec;
